@@ -120,17 +120,15 @@ public class CleanText {
         System.out.println("  Reconstruction avec StringBuilder:");
         System.out.println("  " + reconstruct(sampleTokens));
         System.out.println();
-        
-        System.out.println("===== PARTIE B - LIST & SET =====\n");
-        
-        System.out.println("Q3) Filtrage des stopwords:");
+                
+        System.out.println("Filtrage des stopwords:");
         System.out.println("  Stopwords: " + stopset);
         List<String> filtered = filterStopwords(sampleTokens, stopset);
         System.out.println("  Avant filtrage: " + sampleTokens);
         System.out.println("  Après filtrage: " + filtered);
         System.out.println();
         
-        System.out.println("Q4) Unicité & ordre:");
+        System.out.println("Unicité & ordre:");
         List<String> allTokens = getAllTokens(RAW_COMMENTS, stopset);
         
         Set<String> hashSet = new HashSet<>(allTokens);
@@ -150,10 +148,8 @@ public class CleanText {
         System.out.println("  " + linkedSet);
         System.out.println("  → Intérêt: Préserve l'ordre d'insertion, pas de duplication");
         System.out.println();
-        
-        System.out.println("===== PARTIE C - MAP =====\n");
-        
-        System.out.println("Q5) Fréquences de mots:");
+                
+        System.out.println("Fréquences de mots:");
         Map<String, Integer> frequencies = wordFrequencies(allTokens);
         System.out.println("  Toutes les fréquences: " + frequencies);
         System.out.println();
@@ -167,7 +163,7 @@ public class CleanText {
         }
         System.out.println();
         
-        System.out.println("Q6) Index inverse:");
+        System.out.println(" Index inverse:");
         Map<String, Set<Integer>> invertedIndex = buildInvertedIndex(RAW_COMMENTS, stopset);
         
         String[] demoWords = {"java", "map", "python", "puissantes", "adore"};
@@ -185,4 +181,5 @@ public class CleanText {
         
         System.out.println("Analyse terminée!");
     }
+
 }
