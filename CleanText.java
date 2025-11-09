@@ -171,15 +171,13 @@ public class CleanText {
         for (String word : demoWords) {
             Set<Integer> indices = invertedIndex.get(word);
             if (indices != null) {
-                System.out.printf("    %-15s → commentaires %s%n", word, indices);
+                System.out.printf("    %-15s -> commentaires %s%n", word, indices);
             } else {
-                System.out.printf("    %-15s → (non trouvé)%n", word);
+                System.out.printf("    %-15s -> (non trouvé)%n", word);
             }
-        }
-        System.out.println();
-        System.out.println("  → TreeSet utilisé pour garantir l'ordre croissant des indices");
-        
+        }        
         System.out.println("Analyse terminée!");
     }
 
 }
+
